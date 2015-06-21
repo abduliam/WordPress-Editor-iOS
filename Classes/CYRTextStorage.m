@@ -50,7 +50,7 @@
 {
     if (self = [super init])
     {
-        _defaultFont = [UIFont systemFontOfSize:12.0f];
+        _defaultFont = [UIFont fontWithName:@"HelveticaNeue" size:17.0]; //changed default font_defaultFont = [UIFont systemFontOfSize:12.0f];
         _attributedString = [NSMutableAttributedString new];
         
         _tokens = @[];

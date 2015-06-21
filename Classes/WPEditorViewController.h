@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "HRColorPickerViewController.h"
+#import "WPEditorToolbarView.h"
 
 @class WPEditorField;
 @class WPEditorView;
@@ -124,6 +125,9 @@ WPEditorViewControllerMode;
 #pragma mark - Properties: Editor View
 @property (nonatomic, strong, readonly) WPEditorView *editorView;
 
+#pragma mark - Properties: Toolbar
+@property (nonatomic, strong, readwrite) WPEditorToolbarView* toolbarView; // ARL: publically exposing this for clearing selection on image source selection canceled
+
 #pragma mark - Initializers
 
 /**
@@ -171,5 +175,7 @@ WPEditorViewControllerMode;
  *  @warning The default implementation of this method is blank and does nothing
  */
 - (void)showInsertImageAlternatePicker;
+
+- (NSURL*)urlFromPasteboard; //ARL: make this avaialable publically
 
 @end

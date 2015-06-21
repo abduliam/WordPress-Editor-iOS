@@ -744,8 +744,8 @@ ZSSEditor.updateImage = function(url, alt) {
 
     if (ZSSEditor.currentEditingImage) {
         var c = ZSSEditor.currentEditingImage;
-        c.attr('src', url);
-        c.attr('alt', alt);
+        c.src=url;//arl: fix
+        c.alt=alt;
     }
     ZSSEditor.sendEnabledStyles();
 
@@ -904,8 +904,8 @@ ZSSEditor.markImageUploadDone = function(imageNodeIdentifier) {
             imageNode.parent().replaceWith(imageNode);
         }
         // Wrap link around image
-        var linkTag = '<a href="' + imageNode.attr("src") + '"></a>';
-        imageNode.wrap(linkTag);
+//        var linkTag = '<a href="' + imageNode.attr("src") + '"></a>';
+//        imageNode.wrap(linkTag);
     }
     
     var joinedArguments = ZSSEditor.getJoinedFocusedFieldIdAndCaretArguments();
@@ -996,6 +996,13 @@ ZSSEditor.removeImage = function(imageNodeIdentifier) {
     var imageNode = this.getImageNodeWithIdentifier(imageNodeIdentifier);
     if (imageNode.length != 0){
         imageNode.remove();
+    }else{
+        //we may have a currently selected image
+        if ( ZSSEditor.currentEditingImage ) {
+            ZSSEditor.removeImageSelectionFormatting( ZSSEditor.currentEditingImage );
+            ZSSEditor.currentEditingImage.remove();
+            ZSSEditor.currentEditingImage = null;
+        }
     }
     // if image is inside options container we need to remove the container
     var imageContainerNode = this.getImageContainerNodeWithIdentifier(imageNodeIdentifier);

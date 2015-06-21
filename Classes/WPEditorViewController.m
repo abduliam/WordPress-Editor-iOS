@@ -11,7 +11,6 @@
 
 #import "WPEditorField.h"
 #import "WPEditorToolbarButton.h"
-#import "WPEditorToolbarView.h"
 #import "WPEditorView.h"
 #import "WPImageMeta.h"
 #import "ZSSBarButtonItem.h"
@@ -43,8 +42,7 @@ NSInteger const WPLinkAlertViewTag = 92;
 #pragma mark - Properties: Editor View
 @property (nonatomic, strong, readwrite) WPEditorView *editorView;
 
-#pragma mark - Properties: Toolbar
-@property (nonatomic, strong, readwrite) WPEditorToolbarView* toolbarView;
+
 
 @end
 
