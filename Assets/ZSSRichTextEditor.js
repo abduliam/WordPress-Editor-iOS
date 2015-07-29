@@ -2710,7 +2710,7 @@ ZSSField.prototype.isEmpty = function() {
 };
 
 ZSSField.prototype.getHTML = function() {
-    var html = wp.saveText(this.wrappedObject.html());
+    var html = this.wrappedObject.html();//wp.saveText(this.wrappedObject.html());
     html = ZSSEditor.removeVisualFormatting( html );
     return html
 };
@@ -2727,7 +2727,7 @@ ZSSField.prototype.setPlainText = function(text) {
 
 ZSSField.prototype.setHTML = function(html) {
     ZSSEditor.currentEditingImage = null;
-    var mutatedHTML = wp.loadText(html);
+    var mutatedHTML = html;//wp.loadText(html);//TODO: add our custom loadText and saveText methods if required!
     mutatedHTML = ZSSEditor.applyVisualFormatting(mutatedHTML);
     this.wrappedObject.html(mutatedHTML);
     var thisObj = this;

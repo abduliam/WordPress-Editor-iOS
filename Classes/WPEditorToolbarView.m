@@ -274,14 +274,15 @@ static const CGFloat WPEditorToolbarDividerLineWidth = 0.6f;
                                                     | ZSSRichTextEditorToolbarBold
                                                     | ZSSRichTextEditorToolbarItalic
                                                     | ZSSRichTextEditorToolbarInsertLink
-                                                    | ZSSRichTextEditorToolbarBlockQuote
+//                                                    | ZSSRichTextEditorToolbarBlockQuote // ar removed bq and added strikethrough
+                                                    | ZSSRichTextEditorToolbarStrikeThrough
                                                     | ZSSRichTextEditorToolbarUnorderedList
                                                     | ZSSRichTextEditorToolbarOrderedList);
     
     // iPad gets the HTML source button too
     if (IS_IPAD) {
         defaultToolbarItems = (defaultToolbarItems
-                               | ZSSRichTextEditorToolbarStrikeThrough
+//                               | ZSSRichTextEditorToolbarStrikeThrough //added strikethrough for all devices
                                | ZSSRichTextEditorToolbarViewSource);
     }
     
