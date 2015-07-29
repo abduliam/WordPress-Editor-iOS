@@ -2,7 +2,6 @@
 #import "WPImageSource.h"
 
 #import "WPAnimatedImageResponseSerializer.h"
-#import "WPEditorLoggingConfiguration.h"
 
 NSString * const WPImageSourceErrorDomain = @"WPImageSourceErrorDomain";
 
