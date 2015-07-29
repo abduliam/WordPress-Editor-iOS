@@ -1,5 +1,6 @@
 #import "WPFontManager.h"
 #import <CoreText/CoreText.h>
+#import "WPEditorLoggingConfiguration.h"
 
 @implementation WPFontManager
 
