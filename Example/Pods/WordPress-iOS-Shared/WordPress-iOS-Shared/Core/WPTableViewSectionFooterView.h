@@ -2,8 +2,7 @@
 
 @interface WPTableViewSectionFooterView : UITableViewHeaderFooterView
 
-@property (nonatomic, strong) NSString          *title;
-@property (nonatomic, assign) NSTextAlignment   titleAlignment;
+@property (nonatomic, strong) NSString *title;
 
 // By default, fixedWidth will be enabled, which means for iPads
 // the title label width will be <= WPTableViewFixedWidth. There
