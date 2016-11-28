@@ -249,7 +249,8 @@
 				ORGANIZATIONNAME = "Automattic, Inc.";
 				TargetAttributes = {
 					748D2A84193E516000D5ACC8 = {
-						DevelopmentTeam = PZYM8XX95Q;
+						DevelopmentTeam = 466QPXPAP3;
+						ProvisioningStyle = Manual;
 					};
 					748D2AA8193E516000D5ACC8 = {
 						TestTargetID = 748D2A84193E516000D5ACC8;
@@ -506,12 +507,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Joe DiPasquale (32ZE43JP88)";
+				DEVELOPMENT_TEAM = 466QPXPAP3;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EditorDemo/EditorDemo-Prefix.pch";
 				INFOPLIST_FILE = "EditorDemo/EditorDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5dda32d4-88ed-42ea-97c3-7d4415f77e19";
+				PROVISIONING_PROFILE_SPECIFIER = "RG WildCard Dev";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -523,11 +527,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EditorDemo/EditorDemo-Prefix.pch";
 				INFOPLIST_FILE = "EditorDemo/EditorDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
